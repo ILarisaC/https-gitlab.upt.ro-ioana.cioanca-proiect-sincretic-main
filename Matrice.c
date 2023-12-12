@@ -6,7 +6,7 @@ include <stdio.h>
 #define N 5 // Dimensiunea N a matricei
 
 void generareMatrice(int matrice[M][N]) {
-    // Generarea unei matrici aleatoare
+    
     srand(time(NULL));
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
