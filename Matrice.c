@@ -4,7 +4,7 @@ include <stdio.h>
 
 #define M 5 // Dimensiunea M a matricei
 #define N 5 // Dimensiunea N a matricei
-
+//functie de generare a unei matrici
 void generareMatrice(int matrice[M][N]) {
     
     srand(time(NULL));
