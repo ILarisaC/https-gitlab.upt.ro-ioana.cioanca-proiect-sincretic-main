@@ -1,9 +1,8 @@
-include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 #define MAX 10
-
 
 //functie de generare a unei matrici
 void generareMatrice(int matrice[MAX][MAX], int n) {
@@ -39,9 +38,49 @@ int sumaDiagonalaSecundara(int matrice[MAX][MAX], int n){
     return suma;
 }
 
+int maximSubDiagonalaPrincipala(int matrice[MAX][MAX], int n){
+    int i, j, maxim=matrice[1][0];
+    for(i=2;i<n;i++){
+        for(matrice[i][j]>maxim){
+            maxim=matrice[i][j];
+        }
+    }
+    return maxim;
+}
 
+int minimSubDiagonalaPrincipala(int matrice[MAX][MAX], int n){
+    int i, j, minim=matrice[1][0];
+    for(i=2;i<n;i++){
+        for(matrice[i][j]<mainim){
+            minim=matrice[i][j];
+        }
+    }
+    return minim;
+}
 
+int maximSubDiagonalaSecundara(int matrice[MAX][MAX], int n){
+    int i, j, maxim=matrice[1][n-2];
+    for(i=2;i<n;i++){
+        for(j=n-1;j<n-1;j++){
+            if(matrice[i][j]>maxim){
+                maxim=matrice[i][j];
+            }
+        }
+    }
+    return maxim;
+}
 
+int minimSubDiagonalaSecundara(int matrice[MAX][MAX], int n){
+    int i, j, minim=matrice[1][n-2]; ///initializare primul element sub diagonala
+    for(i=2;i<n;i++){
+        for(j=n-1;j<n-1;j++){
+            if(matrice[i][j]>minim){
+                minim=matrice[i][j];
+            }
+        }
+    }
+    return minim;
+}
 
 
 int main(){
@@ -70,8 +109,6 @@ int main(){
     printf("Minim sub diagonala principala: %d\n", minimSubDiagonalaPrincipala(matrice, n));
     printf("Maxim sub diagonala secundara: %d\n", maximSubDiagonalaSecundara(matrice, n));
     printf("Minim sub diagonala secundara: %d\n", minimSubDiagonalaSecundara(matrice, n));
-
-
 
     return 0;
 }  
