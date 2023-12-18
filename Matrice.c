@@ -4,7 +4,11 @@
 
 #define MAX 10
 
-//functie de generare a unei matrici
+/*(14. Se dă o matrice de dimensiunea M x N, generată aleatoriu. Se cere să se calculeze: a) Suma 
+elementelor aflate pe diagonala principală, respectiv pe diagonala secundară b) Minimul și 
+maximul elementelor aflate sub diagonala principală, respectiv sub diagonala secundară.
+//functie de generare a unei matrici*/
+
 void generareMatrice(int matrice[MAX][MAX], int n) {
     int i, j;
     for ( i = 0; i < m; i++) {
